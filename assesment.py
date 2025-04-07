@@ -1,3 +1,5 @@
+from typing import List
+
 def count_vowels(s: str) -> int:
     vowels = {'a', 'e', 'i', 'o', 'u'}
     count = 0
@@ -20,3 +22,15 @@ def sum_even_numbers(n: int) -> int:
 n = int(input("number: "))
 
 print(f"Sum of even numbers: {sum_even_numbers(n)}")
+
+def extract_digits(s: str) -> List[int]:
+    digits = []
+    for char in s:
+        if '0' <= char <= '9':
+            digits.append(int(char))
+    return digits
+
+
+input_string = input("Enter a string: ")
+
+print(f"Digits : {extract_digits(input_string)}")
